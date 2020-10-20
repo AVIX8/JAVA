@@ -1,25 +1,25 @@
 import java.util.Scanner;
 
 class Vector2 {
-    int x;
-    int y;
+    double x;
+    double y;
     Color color;
 
     public Vector2() {
         this(0, 0);
     }
 
-    public Vector2(int x, int y) {
+    public Vector2(double x, double y) {
         this(x, y, new Color(255,255,255));
     }
 
-    public Vector2(int x, int y, Color color) {
+    public Vector2(double x, double y, Color color) {
         this.x = x;
         this.y = y;
         this.color = color;
     }
 
-    public void init(int x, int y) {
+    public void init(double x, double y) {
         this.x = x;
         this.y = y;
     }
@@ -48,7 +48,7 @@ class Vector2 {
 
     public String toString() {
         return String.format(
-            "<Vector2 (x:%d, y:%d), length: %f, color: \033[48;2;%d;%d;%dm   \033[0m>",
+            "<Vector2 (x:%f, y:%f), length: %f, color: \033[48;2;%d;%d;%dm   \033[0m>",
             x, y, length(), color.r, color.g, color.b
         );
     }
