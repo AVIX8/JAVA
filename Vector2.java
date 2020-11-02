@@ -48,8 +48,8 @@ class Vector2 {
 
     public String toString() {
         return String.format(
-            "<Vector2 (x:%f, y:%f), length: %f, color: \033[48;2;%d;%d;%dm   \033[0m>",
-            x, y, length(), color.r, color.g, color.b
+            "<Vector2 (x:%f, y:%f), length: %f, color: %s>",
+            x, y, length(), color
         );
     }
 

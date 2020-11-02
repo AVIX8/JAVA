@@ -21,4 +21,7 @@ class Color {
         return r+g+b;
     }
     
+    public String toString(){
+        return String.format("\033[48;2;%d;%d;%dm   \033[0m", r, g, b);
+    }
 }

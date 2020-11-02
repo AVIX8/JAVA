@@ -13,14 +13,14 @@ class App {
 
         System.out.println("6) Продемонстрировать работу с массивом объектов;");
         int k = 10;
-        Vector2 arr2[] = new Vector2[k];
+        Vector2 arr[] = new Vector2[k];
         for (int i = 0; i < k; i++) {
-            arr2[i] = new Vector2(Math.random() * 20 - 10, Math.random() * 20 - 10,
+            arr[i] = new Vector2(Math.random() * 20 - 10, Math.random() * 20 - 10,
                     new Color((int) (Math.random() * 255), (int) (Math.random() * 255), (int) (Math.random() * 255)));
         }
 
         for (int i = 0; i < k; i++) {
-            System.out.printf("vector%d = %s\n", i, arr2[i]);
+            System.out.printf("vector%d = %s\n", i, arr[i]);
         }
 
         Pause(input);
@@ -31,16 +31,14 @@ class App {
         System.out.printf("RGB sum = %d", v7.color.getRGBSum());
 
         Pause(input);
-
-        System.out.println("8) Продемонстрировать разумное использование this;");
-
-        // later
-
-        Pause(input);
+        //8) Продемонстрировать разумное использование this; ?
 
         System.out.println("9) Продемонстрировать обработку строк (String);");
 
-        // later
+        for (int i = 0; i < k; i++) {
+            StringBuilder sb = new StringBuilder(arr[i].toString().split("\033")[0]).reverse();
+            System.out.println(">" + arr[i].color.toString() + sb);
+        }
 
         Pause(input);
 
