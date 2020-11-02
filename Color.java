@@ -16,5 +16,9 @@ class Color {
         this.g = g;
         this.b = b;
     }
+
+    public int getRGBSum() {
+        return r+g+b;
+    }
     
 }

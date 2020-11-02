@@ -36,8 +36,8 @@ class Vector2 {
                 this.y = input.nextInt();
                 break;
             } catch (java.util.InputMismatchException e) {
-                input.nextLine();
                 System.err.print("[!] You have entered incorrect data, please try again.\n");
+                input.nextLine();
             }
         }
     }
