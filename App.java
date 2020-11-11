@@ -31,7 +31,6 @@ class App {
         System.out.printf("RGB sum = %d", v7.color.getRGBSum());
 
         Pause(input);
-        //8) ѕродемонстрировать разумное использование this; ?
 
         System.out.println("9) ѕродемонстрировать обработку строк (String);");
 
@@ -45,26 +44,25 @@ class App {
         while (true) {
             Vector2 v1 = new Vector2();
             v1.read(input);
-            v1.setColor(new Color(255, 255, 0));
+            v1.setColor(Color.red);
             System.out.print("v1 = ");
             v1.display();
 
             Vector2 v2 = new Vector2();
             v2.read(input);
-            v2.setColor(new Color(0, 255, 255));
+            v2.setColor(Color.green);
             System.out.print("v2 = ");
             v2.display();
 
-            System.out.printf("Angle between v1 and v2 = %.2f degrees\n", v1.angle(v2));
+            System.out.printf("Angle between v1 and v2 = %.2f degrees\n", Vector2.angle(v1, v2));
 
             Vector2 sum = v1.add(v2);
             System.out.print("v1 + v2 = ");
-            sum.setColor(new Color(255, 0, 255));
+            sum.setColor(Color.blue);
             sum.display();
 
             input.nextLine();
             Pause(input);
         }
     }
-
 }
