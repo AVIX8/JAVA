@@ -1,7 +1,11 @@
 class Color {
-    public int r;
-    public int g;
-    public int b;
+    public static final Color red = new Color(255,0,0);
+    public static final Color green = new Color(0,255,0);
+    public static final Color blue = new Color(0,0,255);
+
+    private int r;
+    private int g;
+    private int b;
 
     public Color()
     {
