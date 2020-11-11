@@ -57,12 +57,12 @@ class Vector2 {
         System.out.println(this);
     }
 
-    public double scalar(Vector2 otherVector) {
-        return this.x * otherVector.x + this.y * otherVector.y;
+    public static double scalar(Vector2 v1, Vector2 v2) {
+        return v1.x * v2.x + v1.y * v2.y;
     }
 
-    public double angle(Vector2 otherVector) {
-        double ang = Math.acos(this.scalar(otherVector) / this.length() / otherVector.length()) / Math.PI * 180;
+    public static double angle(Vector2 v1, Vector2 v2) {
+        double ang = Math.acos(Vector2.scalar(v1, v2) / v1.length() / v2.length()) / Math.PI * 180;
         return Math.min(ang, 360 - ang);
     }
 
