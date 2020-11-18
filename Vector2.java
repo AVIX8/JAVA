@@ -19,11 +19,6 @@ class Vector2 {
         this.color = color;
     }
 
-    public void init(double x, double y) {
-        this.x = x;
-        this.y = y;
-    }
-
     public void setColor(Color _color) {
         this.color = _color;
     }

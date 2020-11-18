@@ -11,32 +11,12 @@ class App {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("6) ѕродемонстрировать работу с массивом объектов;");
-        int k = 10;
-        Vector2 arr[] = new Vector2[k];
-        for (int i = 0; i < k; i++) {
-            arr[i] = new Vector2(Math.random() * 20 - 10, Math.random() * 20 - 10,
-                    new Color((int) (Math.random() * 255), (int) (Math.random() * 255), (int) (Math.random() * 255)));
-        }
+        System.out.println("3) »нициализировать небольшой массив конструктором с одним параметром;");
 
-        for (int i = 0; i < k; i++) {
+        Vector2 arr[] = new Vector2[] { new Vector2(), new Vector2(2, 4), new Vector2(3, 6, Color.red) };
+
+        for (int i = 0; i < arr.length; i++) {
             System.out.printf("vector%d = %s\n", i, arr[i]);
-        }
-
-        Pause(input);
-
-        System.out.println("7) ѕродемонстрировать возврат целочисленного значени€ из метода через вспомогательный класс;");
-
-        Vector2 v7 = new Vector2(4,5,new Color(128,256,0));
-        System.out.printf("RGB sum = %d", v7.color.getRGBSum());
-
-        Pause(input);
-
-        System.out.println("9) ѕродемонстрировать обработку строк (String);");
-
-        for (int i = 0; i < k; i++) {
-            StringBuilder sb = new StringBuilder(arr[i].toString().split("\033")[0]).reverse();
-            System.out.println(">" + arr[i].color.toString() + sb);
         }
 
         Pause(input);
