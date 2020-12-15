@@ -21,6 +21,25 @@ class App {
 
         Pause(input);
 
+        System.out.println("1) В main продемонстрировать работу с одно и двумерными массивами объектов вашего класса;");
+
+        Vector2 twoDimArr[][] = new Vector2[10][30];
+        for (int i = 0; i < twoDimArr.length; i++) {
+            for (int j = 0; j < twoDimArr[i].length; j++) {
+                twoDimArr[i][j] = new Vector2(i,j,
+                    new Color(i*(int)255/twoDimArr.length, 0, j*(int)255/twoDimArr[i].length)
+                );
+            }
+        }
+
+        for (int i = 0; i < twoDimArr.length; i++) {
+            for (int j = 0; j < twoDimArr[i].length; j++) {
+                System.out.print(twoDimArr[i][j].color);
+            }
+            System.out.println();
+        }
+
+
         while (true) {
             Vector2 v1 = new Vector2();
             v1.read(input);
