@@ -39,7 +39,7 @@ class App {
             System.out.println();
         }
 
-
+        Pause(input);
         while (true) {
             Vector2 v1 = new Vector2();
             v1.read(input);

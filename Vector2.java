@@ -29,8 +29,11 @@ class Vector2 {
             try {
                 this.x = input.nextInt();
                 this.y = input.nextInt();
+                if (this.x > 10) {
+                    throw new Exception("[!] x cannot be more than 10");
+                }
                 break;
-            } catch (java.util.InputMismatchException e) {
+            } catch (Exception e) {
                 System.err.print("[!] You have entered incorrect data, please try again.\n");
                 input.nextLine();
             }
